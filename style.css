@@ -1,0 +1,125 @@
+:root {
+  --background-color: #f9f6f0;
+  --max-width: 650px;
+  --link-color: #f03;
+  --quote-color: #888;
+}
+
+.banner a {
+  display: flex;
+  justify-content: center;
+}
+.banner img {
+  width: 40%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.people {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: a; */
+  gap: 5px;
+  width: 100%;
+}
+.person img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.person div {
+  text-align: center;
+}
+
+/* Generic styles */
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+
+  font-family: 'Inter', 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0 1rem;
+  margin-bottom: 25vh;
+}
+
+ul, ol {
+  padding: 0 auto;
+  margin: 0 1em;
+}
+
+blockquote {
+  position: relative;
+  width: 100%;
+  padding: 1rem 1rem 1rem 2rem;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  background: #fff;
+  color: #333;
+  border-left: 2px solid var(--quote-color); 
+}
+
+blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: .2rem;
+  left: .3rem;
+  font-size: 2rem; 
+  color: var(--quote-color);
+  line-height: 1;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 0.3s ease;
+}
+
+a:hover {
+  text-decoration-color: var(--link-color);
+}
+
+section[role="doc-endnotes"] ol li a[role="doc-backlink"] {
+  padding-right: 0.2em;
+}
+
+video {
+  max-width: 100%;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  body {
+    font-size: 14pt;
+    line-height: 1.4;
+    padding: 0 2rem;
+  }
+
+  blockquote {
+    max-width: 24rem;
+    padding: 1rem 1.5rem 1rem 2.5rem;
+    margin: 2rem auto;
+    font-size: 16pt;
+  }
+
+  blockquote::before {
+    top: .4rem;
+    left: .5rem;
+    font-size: 2.5rem;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  body {
+    padding: 0 20vw;
+  }
+}
