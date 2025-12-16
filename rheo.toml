@@ -1,3 +1,9 @@
+content_dir = "pages"
+
+[pdf.merge]
+title = "The Free Computing Lab"
+spine = ["*.typ"]
+
 [epub.merge]
 title = "The Free Computing Lab"
-spine = ["pages/*.typ"]
+spine = ["*.typ"]
