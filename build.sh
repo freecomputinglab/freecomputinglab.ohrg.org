@@ -3,9 +3,9 @@ set -e
 
 echo "=== Starting build ==="
 
-# Setup paths
+# Setup paths - use node_modules for caching (automatically cached by Netlify)
 REPO_DIR="$(pwd)"
-RHEO_CACHE="$REPO_DIR/.rheo-binary"
+RHEO_CACHE="$REPO_DIR/node_modules/.bin"
 RHEO_BIN="$RHEO_CACHE/rheo"
 
 # Install Rust toolchain (rustup/cargo are pre-installed on Netlify)
@@ -34,8 +34,10 @@ if [ ! -f "$RHEO_BIN" ]; then
   cp target/release/rheo "$RHEO_BIN"
   chmod +x "$RHEO_BIN"
   cd "$REPO_DIR"
+
+  echo "Rheo built and cached"
 else
-  echo "Using cached rheo binary"
+  echo "Using cached rheo binary from previous build"
 fi
 
 # Compile with rheo

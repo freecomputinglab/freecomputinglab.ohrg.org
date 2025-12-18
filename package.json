@@ -1,9 +1,0 @@
-{
-  "name": "The free computing lab",
-  "version": "1.0.0",
-  "description": "The free computing lab website",
-  "private": true,
-  "devDependencies": {
-    "netlify-plugin-cache": "^1.0.3"
-  }
-}
