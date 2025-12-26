@@ -7,6 +7,7 @@ echo "=== Starting build ==="
 REPO_DIR="$(pwd)"
 RHEO_CACHE="$REPO_DIR/.cache/rheo-bin"
 RHEO_BIN="$RHEO_CACHE/rheo"
+export CARGO_HOME="$REPO_DIR/.cache/cargo"
 
 # Install Rust toolchain (rustup/cargo are pre-installed on Netlify)
 if ! command -v rustc &> /dev/null; then
