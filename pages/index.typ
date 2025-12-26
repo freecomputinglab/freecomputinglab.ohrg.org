@@ -25,7 +25,7 @@ Our *research projects* include:
 
 #html.elem("div", attrs: (class: "people"))[
   #person([Lachlan Kermode], "./img/lachlankermode.jpg")
-  // #person([Will Crichton], "./img/willcrichton.webp")
+  #person([Will Crichton], "./img/willcrichton.jpg")
 ]
 
 #linebreak()
