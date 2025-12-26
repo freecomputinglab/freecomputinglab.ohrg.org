@@ -3,9 +3,9 @@ set -e
 
 echo "=== Starting build ==="
 
-# Setup paths - use node_modules for caching (automatically cached by Netlify)
+# Setup paths - use .cache for caching (automatically cached by Cloudflare Pages)
 REPO_DIR="$(pwd)"
-RHEO_CACHE="$REPO_DIR/node_modules/.bin"
+RHEO_CACHE="$REPO_DIR/.cache/rheo-bin"
 RHEO_BIN="$RHEO_CACHE/rheo"
 
 # Install Rust toolchain (rustup/cargo are pre-installed on Netlify)

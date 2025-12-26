@@ -1,0 +1,9 @@
+name = "freecomputinglab-ohrg-org"
+compatibility_date = "2025-12-26"
+
+[build]
+command = "bash build.sh"
+
+[build.upload]
+dir = "build/html"
+format = "service-worker"
