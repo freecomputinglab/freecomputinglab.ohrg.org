@@ -1,9 +1,10 @@
 content_dir = "pages"
 
-[pdf.merge]
+[pdf.spine]
+merge = true
 title = "The Free Computing Lab"
-spine = ["*.typ"]
+vertebrae = ["*.typ"]
 
-[epub.merge]
+[epub.spine]
 title = "The Free Computing Lab"
-spine = ["*.typ"]
+vertebrae = ["*.typ"]
