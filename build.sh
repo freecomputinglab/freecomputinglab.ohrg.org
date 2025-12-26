@@ -9,11 +9,19 @@ RHEO_CACHE="$REPO_DIR/.cache/rheo-bin"
 RHEO_BIN="$RHEO_CACHE/rheo"
 export CARGO_HOME="$REPO_DIR/.cache/cargo"
 
-# Install Rust toolchain (rustup/cargo are pre-installed on Netlify)
+# Install Rust toolchain
 if ! command -v rustc &> /dev/null; then
   echo "Installing Rust stable toolchain..."
-  rustup toolchain install stable --profile minimal
-  rustup default stable
+
+  # Install rustup if not available
+  if ! command -v rustup &> /dev/null; then
+    echo "Installing rustup..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-toolchain stable
+    source "$CARGO_HOME/env"
+  else
+    rustup toolchain install stable --profile minimal
+    rustup default stable
+  fi
 else
   echo "Rust toolchain already available"
 fi
