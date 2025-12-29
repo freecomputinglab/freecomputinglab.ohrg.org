@@ -13,12 +13,12 @@
 
 The free computing lab researches the nature of computing freedom.
 Our research aims to demonstrate the role that the computer could and _should_ play in a society where freedom is flourishing rather than deprecated, and to cultivate a critically grounded practice of software production, development, and maintenance.
+See our #link("https://github.com/free-computing-lab")[GitHub page] for code and more information.
 
 Our *research projects* include:
 - #link("https://rheo.ohrg.org")[Rheo], a typesetting and static site engine based on Typst.
 
 
-See our #link("https://github.com/free-computing-lab")[GitHub page] for code and more information.
 
 // - #link("./capital-for-tech-workers.typ")[Capital for tech workers], an introduction to Marx's 1867 book _Capital Volume I_ for software engineers, designers, and product managers.
 
