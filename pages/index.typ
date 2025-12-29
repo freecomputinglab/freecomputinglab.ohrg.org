@@ -1,7 +1,7 @@
-#let person(name, imgurl) = html.elem("div", attrs: (class: "person"))[
+#let person(name, imgurl, url) = html.elem("a", attrs: (href: url, target: "_blank"))[#html.elem("div", attrs: (class: "person"))[
   #image(imgurl)
   #html.elem("div", attrs: (class: "title"))[#name]
-]
+]]
 
 #let banner = html.elem("div", attrs: (class: "banner"))[
   #html.elem("a", attrs: (href: "/"))[
@@ -25,8 +25,8 @@ See our #link("https://github.com/free-computing-lab")[GitHub page] for code and
 ==== People
 
 #html.elem("div", attrs: (class: "people"))[
-  #person([Lachlan Kermode], "./img/lachlankermode.jpg")
-  #person([Will Crichton], "./img/willcrichton.jpg")
+  #person([Lachlan Kermode], "./img/lachlankermode.jpg", "https://lachlankermode.com")
+  #person([Will Crichton], "./img/willcrichton.jpg", "https://willcrichton.net")
 ]
 
 #linebreak()
