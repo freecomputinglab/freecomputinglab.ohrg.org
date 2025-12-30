@@ -18,8 +18,6 @@ See our #link("https://github.com/free-computing-lab")[GitHub page] for code and
 Our *research projects* include:
 - #link("https://rheo.ohrg.org")[Rheo], a typesetting and static site engine based on Typst.
 
-
-
 // - #link("./capital-for-tech-workers.typ")[Capital for tech workers], an introduction to Marx's 1867 book _Capital Volume I_ for software engineers, designers, and product managers.
 
 ==== People
@@ -31,4 +29,4 @@ Our *research projects* include:
 
 #linebreak()
 
-If you're interested in what we do, you can drop us a note at #link("mailto:hi@ohrg.org")[hi\@ohrg.org].
+If you're interested in what we do, you can #link("https://freecomputinglab.zulipchat.com/join/dit724hcwgbhic3xxwkdpkqs/")[join our Zulip], or drop us a note at #link("mailto:hi@ohrg.org")[hi\@ohrg.org].
