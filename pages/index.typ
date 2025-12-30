@@ -13,7 +13,9 @@
 
 The free computing lab researches the nature of computing freedom.
 Our research aims to demonstrate the role that the computer could and _should_ play in a society where freedom is flourishing rather than deprecated, and to cultivate a critically grounded practice of software production, development, and maintenance.
+
 See our #link("https://github.com/free-computing-lab")[GitHub page] for code and more information.
+You can also #link("https://freecomputinglab.zulipchat.com/join/dit724hcwgbhic3xxwkdpkqs/")[join our Zulip] to ask questions and follow our research, or drop us a note at #link("mailto:hi@ohrg.org")[hi\@ohrg.org].
 
 Our *research projects* include:
 - #link("https://rheo.ohrg.org")[Rheo], a typesetting and static site engine based on Typst.
@@ -29,4 +31,4 @@ Our *research projects* include:
 
 #linebreak()
 
-If you're interested in what we do, you can #link("https://freecomputinglab.zulipchat.com/join/dit724hcwgbhic3xxwkdpkqs/")[join our Zulip], or drop us a note at #link("mailto:hi@ohrg.org")[hi\@ohrg.org].
+
