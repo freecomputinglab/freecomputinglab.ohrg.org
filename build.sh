@@ -26,25 +26,17 @@ else
   echo "Rust toolchain already available"
 fi
 
-# Build or use cached rheo binary
+# Install or use cached rheo binary
 if [ ! -f "$RHEO_BIN" ]; then
-  echo "Building rheo from source..."
+  echo "Installing rheo..."
 
-  if [ -z "$GITHUB_TOKEN" ]; then
-    echo "Error: GITHUB_TOKEN environment variable not set"
-    exit 1
-  fi
-
-  git clone https://${GITHUB_TOKEN}@github.com/breezykermo/rheo /tmp/rheo
-  cd /tmp/rheo
-  cargo build --release
+  cargo install rheo --locked
 
   mkdir -p "$RHEO_CACHE"
-  cp target/release/rheo "$RHEO_BIN"
+  cp "$CARGO_HOME/bin/rheo" "$RHEO_BIN"
   chmod +x "$RHEO_BIN"
-  cd "$REPO_DIR"
 
-  echo "Rheo built and cached"
+  echo "Rheo installed and cached"
 else
   echo "Using cached rheo binary from previous build"
 fi
