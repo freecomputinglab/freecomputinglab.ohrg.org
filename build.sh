@@ -28,9 +28,12 @@ fi
 
 # Install or use cached rheo binary
 if [ ! -f "$RHEO_BIN" ]; then
-  echo "Installing rheo..."
+  echo "Installing rheo from dev branch..."
 
-  cargo install rheo --locked
+  RHEO_SRC="$REPO_DIR/.cache/rheo-src"
+  rm -rf "$RHEO_SRC"
+  git clone --branch dev --depth 1 https://github.com/freecomputinglab/rheo.git "$RHEO_SRC"
+  cargo install --path "$RHEO_SRC" --locked
 
   mkdir -p "$RHEO_CACHE"
   cp "$CARGO_HOME/bin/rheo" "$RHEO_BIN"
