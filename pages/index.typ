@@ -20,7 +20,7 @@ You can also #link("https://freecomputinglab.zulipchat.com/join/dit724hcwgbhic3x
 Our *projects* include:
 - #link("https://rheo.ohrg.org")[Rheo], a typesetting and static site engine based on Typst.
 - #link("https://maths.ohrg.org")[Math(s), Philosophy, History], a long-running online \~bi-weekly reading group.
-- #link("https://maths.ohrg.org")[_Capital_ for Tech Workers], an online seminar reading Marx's _Capital_ (Volume I) with and for tech workers.
+- #link("https://cftw.ohrg.org")[_Capital_ for Tech Workers], an online seminar reading Marx's _Capital_ (Volume I) with and for tech workers.
 - #link("https://screening-the-subject.ohrg.org")[Screening the Subject], a serial blog analyzing the TV show #link("https://en.wikipedia.org/wiki/Severance_(TV_series)")[_Severance_].
 
 
