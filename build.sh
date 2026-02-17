@@ -1,52 +1,38 @@
 #!/bin/bash
 set -e
+set -x
 
 echo "=== Starting build ==="
+echo "Timestamp: $(date)"
 
-# Setup paths - use .cache for caching (automatically cached by Cloudflare Pages)
+# Setup paths
 REPO_DIR="$(pwd)"
-RHEO_CACHE="$REPO_DIR/.cache/rheo-bin"
+RHEO_VERSION="v0.1.2"
+RHEO_CACHE="$REPO_DIR/.rheo-binary"
 RHEO_BIN="$RHEO_CACHE/rheo"
-export CARGO_HOME="$REPO_DIR/.cache/cargo"
 
-# Install Rust toolchain
-if ! command -v rustc &> /dev/null; then
-  echo "Installing Rust stable toolchain..."
-
-  # Install rustup if not available
-  if ! command -v rustup &> /dev/null; then
-    echo "Installing rustup..."
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-toolchain stable
-    source "$CARGO_HOME/env"
-  else
-    rustup toolchain install stable --profile minimal
-    rustup default stable
-  fi
-else
-  echo "Rust toolchain already available"
-fi
-
-# Install or use cached rheo binary
+# Download rheo binary from GitHub release if not cached
 if [ ! -f "$RHEO_BIN" ]; then
-  echo "Installing rheo from dev branch..."
-
-  RHEO_SRC="$REPO_DIR/.cache/rheo-src"
-  rm -rf "$RHEO_SRC"
-  git clone --branch dev --depth 1 https://github.com/freecomputinglab/rheo.git "$RHEO_SRC"
-  cargo install --path "$RHEO_SRC" --locked
-
+  echo "Downloading rheo ${RHEO_VERSION}..."
   mkdir -p "$RHEO_CACHE"
-  cp "$CARGO_HOME/bin/rheo" "$RHEO_BIN"
+  curl -sL "https://github.com/freecomputinglab/rheo/releases/download/${RHEO_VERSION}/rheo-x86_64-unknown-linux-gnu.zip" -o /tmp/rheo.zip
+  unzip -o /tmp/rheo.zip -d "$RHEO_CACHE"
   chmod +x "$RHEO_BIN"
-
-  echo "Rheo installed and cached"
+  rm /tmp/rheo.zip
+  echo "Rheo downloaded successfully"
 else
-  echo "Using cached rheo binary from previous build"
+  echo "Using cached rheo binary"
 fi
+
+# Add rheo to PATH
+export PATH="$RHEO_CACHE:$PATH"
+
+# Verify rheo is accessible
+rheo --version || echo "Warning: rheo --version failed, but continuing..."
 
 # Compile with rheo
 echo "Compiling with rheo..."
-"$RHEO_BIN" compile .
+rheo compile .
 
 # Verify output
 if [ ! -f "build/html/index.html" ]; then
