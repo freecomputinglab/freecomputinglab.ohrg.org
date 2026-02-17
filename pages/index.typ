@@ -33,7 +33,7 @@ Our *projects* include:
 #html.elem("div", attrs: (class: "people"))[
   #person([Lachlan Kermode], "./img/lachlankermode.jpg", "https://lachlankermode.com")
   #person([Will Crichton], "./img/willcrichton.jpg", "https://willcrichton.net")
-  #person([Erika Bussman], "./img/erikabussman.jpg", "https://www.linkedin.com/in/erika-bussmann")
+  #person([Erika Bussmann], "./img/erikabussmann.jpg", "https://www.linkedin.com/in/erika-bussmann")
 ]
 
 #linebreak()
