@@ -10,11 +10,12 @@
 .banner a {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .banner img {
-  width: 40%;
-  object-fit: cover;
-  object-position: bottom;
+  width: 270px;
+  height: 270px;
+  object-fit: contain;
 }
 
 .rheo-banner a {
