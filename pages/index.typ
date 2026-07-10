@@ -34,8 +34,8 @@ Our *projects* include:
 
 #html.elem("div", attrs: (class: "people"))[
   #person([Lachlan Kermode], "./img/lachlankermode.jpg", "https://lachlankermode.com")
-  #person([Will Crichton], "./img/willcrichton.jpg", "https://willcrichton.net")
   #person([Erika Bussmann], "./img/erikabussmann.jpg", "https://www.linkedin.com/in/erika-bussmann")
+  #person([Will Crichton], "./img/willcrichton.jpg", "https://willcrichton.net")
   #person([Francis Tseng], "./img/francistseng.webp", "https://zeng.works/")
   #person([Austen Van Burns], "./img/austenvanburns.jpg", "https://history.princeton.edu/people/austen-van-burns")
 ]
