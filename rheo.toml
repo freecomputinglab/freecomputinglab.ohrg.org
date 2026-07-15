@@ -1,11 +1,9 @@
-version = "0.4.0"
+version = "0.5.0"
 content_dir = "pages"
 
 [pdf.spine]
 merge = true
 title = "The Free Computing Lab"
-vertebrae = ["*.typ"]
 
 [epub.spine]
 title = "The Free Computing Lab"
-vertebrae = ["*.typ"]
