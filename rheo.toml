@@ -1,9 +1,2 @@
-version = "0.5.0"
+version = "0.6.0"
 content_dir = "pages"
-
-[pdf.spine]
-merge = true
-title = "The Free Computing Lab"
-
-[epub.spine]
-title = "The Free Computing Lab"
