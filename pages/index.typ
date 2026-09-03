@@ -16,7 +16,7 @@
 The free computing lab researches the nature of computing freedom.
 Our research aims to demonstrate the role that the computer could and _should_ play in a society where freedom is flourishing rather than deprecated, and to cultivate a critically grounded practice of software production, development, and maintenance.
 
-See our #link("https://github.com/free-computing-lab")[GitHub page] for code and more information.
+See our #link("https://github.com/freecomputinglab")[GitHub page] for code and more information.
 You can also #link("https://freecomputinglab.zulipchat.com/join/dit724hcwgbhic3xxwkdpkqs/")[join our Zulip] to ask questions and follow our research, or drop us a note at #link("mailto:hi@ohrg.org")[hi\@ohrg.org].
 
 Our *projects* include:
