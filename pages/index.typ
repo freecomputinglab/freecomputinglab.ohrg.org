@@ -1,3 +1,5 @@
+#set document(title: "Free Computing Lab")
+
 #let person(name, imgurl, url) = html.elem("a", attrs: (href: url, target: "_blank"))[#html.elem("div", attrs: (
   class: "person",
 ))[
