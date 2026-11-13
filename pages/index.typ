@@ -40,7 +40,7 @@ Our *projects* include:
   #person([Erika Bussmann], "./img/erikabussmann.jpg", "https://www.linkedin.com/in/erika-bussmann")
   #person([Will Crichton], "./img/willcrichton.jpg", "https://willcrichton.net")
   #person([Francis Tseng], "./img/francistseng.webp", "https://zeng.works/")
-  #person([Austen Van Burns], "./img/austenvanburns.jpg", "https://history.princeton.edu/people/austen-van-burns")
+  #person([Austen Van Burns], "./img/austenvanburns.jpg", "https://history.uchicago.edu/directory/austen-van-burns")
 ]
 
 #linebreak()
